@@ -8,11 +8,10 @@ import CurrentForecast from "../components/CurrentForecast";
 import WeekForecast from "../components/WeekForecast";
 import CurrentWindCondition from "../components/CurrentWindCondition";
 
-const page = () => {
+const WeatherMainPage = () => {
   const [latitude, setLatitude] = useState(null);
   const [longitude, setLongitude] = useState(null);
   const [city, setCity] = useState("");
-  const [error, setError] = useState(null);
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
@@ -70,4 +69,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default WeatherMainPage;
