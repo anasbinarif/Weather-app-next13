@@ -16,6 +16,7 @@ const page = () => {
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
+    console.log("env", process.env.WEATHER_API_KEY);
     if (navigator.geolocation) {
       navigator.geolocation.getCurrentPosition(
         (position) => {

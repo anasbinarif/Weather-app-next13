@@ -1,6 +1,7 @@
 export const GET = async (req, res) => {
   try {
-    const ownKey = "244214300c31cb99ca6d50f32099e295";
+    const ownKey = process.env.WEATHER_API_KEY;
+    // console.log(ownKey);
     const latitude = req.nextUrl.searchParams.get("latitude");
     const longitude = req.nextUrl.searchParams.get("longitude");
     const response = await fetch(
@@ -9,7 +10,7 @@ export const GET = async (req, res) => {
     );
 
     if (!response.ok) {
-      throw new Response("HTTP error! status: ", {status: response.status});
+      throw new Response("HTTP error! status: ", { status: response.status });
     }
 
     const data = await response.json();

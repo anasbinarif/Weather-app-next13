@@ -1,6 +1,6 @@
 export const GET = async (req, res) => {
   try {
-    const ownKey = "244214300c31cb99ca6d50f32099e295";
+    const ownKey = process.env.WEATHER_API_KEY;
     const latitude = req.nextUrl.searchParams.get("latitude");
     const longitude = req.nextUrl.searchParams.get("longitude");
     const response = await fetch(

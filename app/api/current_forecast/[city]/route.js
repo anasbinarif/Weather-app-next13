@@ -1,6 +1,6 @@
 export const GET = async (req, { params }) => {
     try {
-      const ownKey = "244214300c31cb99ca6d50f32099e295";
+      const ownKey = process.env.WEATHER_API_KEY;
       
       const response = await fetch(
         `https://api.openweathermap.org/data/2.5/forecast?units=metric&q=${params.city}&appid=${ownKey}`,
