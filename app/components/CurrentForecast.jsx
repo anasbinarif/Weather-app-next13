@@ -25,7 +25,7 @@ const CurrentForecast = ({ longitude, latitude, city }) => {
   return (
     <div className="bg-gray-200 rounded-md p-5">
       <h3 className="text-lg font-semibold text-gray-400 mt-[-14px] mb-4">
-        TODAY'S FORECAST
+        TODAY&apos;S FORECAST
       </h3>
       <div className="flex justify-around">
         {forecast.map((fore, key) => (

@@ -8,7 +8,6 @@ import {
 } from "react-icons/bs";
 
 export const WeatherIcon = ({ icon }) => {
-  console.log("hello ali");
   return (
     <>
       {icon === "Clear" && <TiWeatherSunny size={48} />}
